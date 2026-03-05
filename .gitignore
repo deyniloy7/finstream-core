@@ -1,0 +1,27 @@
+# Build artifacts
+/target/
+build/
+*.class
+*.jar
+*.war
+*.ear
+
+# IDE settings
+.idea/
+.settings/
+.classpath
+.project
+*.iml
+*.iws
+
+# Logs
+*.log
+*.log.*
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Secrets (NEVER commit these!)
+application-secrets.yml
+*.properties.local
