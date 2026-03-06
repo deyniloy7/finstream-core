@@ -12,8 +12,9 @@
 	<groupId>com.finstream</groupId>
 	<artifactId>finstream-core</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
+	<packaging>pom</packaging>
 	<name>finstream-core</name>
-	<description>Demo project for Spring Boot</description>
+	<description>FinStream Multi-module Project</description>
 	<url />
 	<licenses>
 		<license />
@@ -27,21 +28,29 @@
 		<tag />
 		<url />
 	</scm>
+	<modules>
+		<module>finstream-core-api</module>
+		<module>finstream-core-service</module>
+		<module>finstream-core-app</module>
+	</modules>
 	<properties>
 		<java.version>17</java.version>
+		<project.version>0.0.1-SNAPSHOT</project.version>
 	</properties>
-	<dependencies>
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-web</artifactId>
-		</dependency>
-
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-test</artifactId>
-			<scope>test</scope>
-		</dependency>
-	</dependencies>
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>com.finstream</groupId>
+				<artifactId>finstream-core-api</artifactId>
+				<version>${project.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.finstream</groupId>
+				<artifactId>finstream-core-service</artifactId>
+				<version>${project.version}</version>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
 
 	<build>
 		<plugins>
